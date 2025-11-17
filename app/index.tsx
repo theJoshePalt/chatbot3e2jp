@@ -1,9 +1,9 @@
 // app/chat.tsx
 import React, { useState } from "react";
-import {  View,  Text,  TextInput,  TouchableOpacity,  FlatList,  ActivityIndicator,  KeyboardAvoidingView,  Platform,} from "react-native";
+import { ActivityIndicator, FlatList, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View, } from "react-native";
 import RespMessage from "../components/RespMessage";
 import WelcomeM from "../components/WelcomeM";
-import "@/global.css";
+
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export default function Chat() {
@@ -36,7 +36,10 @@ export default function Chat() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            contents: [{ parts: [{ text: nuevoMensaje.text }] }],
+            contents: [{ 
+              parts: [{ 
+                text: nuevoMensaje.text }] }],
+            
           }),
         }
       );
