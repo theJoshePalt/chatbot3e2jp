@@ -36,10 +36,21 @@ export default function Chat() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            contents: [{ 
-              parts: [{ 
-                text: nuevoMensaje.text }] }],
-            
+            systemInstruction: {
+              role: "system",
+              parts: [
+                {
+                  text: "Responde sin tanto texto, responde como un amigo y se amable. Usa terminos informales y en español."
+                }
+              ]
+            },
+            contents: [
+              {
+                parts: [
+                  { text: nuevoMensaje.text }
+                ]
+              }
+            ],
           }),
         }
       );
