@@ -6,7 +6,7 @@ export default function RespMessage({ type, text }: { type: string; text: string
   return (
     <View
       className={`my-2 p-3 rounded-2xl max-w-[80%] ${
-        isUser ? "self-end border " : "self-start bg-gray-300"
+        isUser ? "self-end border border-[#046d0b] " : "self-start bg-gray-300"
       }`}
     >
       <Text className={isUser ? "text-white" : "text-black"}>{text}</Text>

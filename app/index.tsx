@@ -104,7 +104,7 @@ export default function Chat() {
         {/* Indicador de carga */}
         {isLoading && (
           <View className="py-4 items-center">
-            <ActivityIndicator size="large" color="#3B82F6" />
+            <ActivityIndicator size="large" color="#16E300" />
             <Text className="text-gray-500 mt-2">Pensando...</Text>
           </View>
         )}
